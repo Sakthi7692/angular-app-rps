@@ -1,0 +1,22 @@
+
+
+<div class="card card-block">
+    <h4 class="card-title">Create Message</h4>
+    <div class="form-group">
+      <input type="text"
+             class="form-control"
+             placeholder="Enter the category"
+             #category>
+    </div>
+    <div class="form-group">
+      <input type="text"
+             class="form-control"
+             placeholder="Enter the punchline"
+          #punchline>
+  
+    <button type="button"
+            class="btn btn-primary"
+            (click)="createMessage(category.value, punchline.value)">Create
+    </button>
+  </div>
+  

@@ -1,0 +1,11 @@
+<div class="bg-info dark">
+    <h2 class="bg-warning">Stock Exchange</h2>
+    Enter Stock Name:
+    <input type="text" (keyup)="onInputEvent($event)">
+    <br/>
+    <div>Stock is {{stock}}</div>
+</div>
+
+<order-processor [stockSymbol]="stock" [quantity]="100" (throwStockBack)="catchCallStock($event)"></order-processor>
+
+<timer></timer>

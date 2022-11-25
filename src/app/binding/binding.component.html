@@ -1,0 +1,26 @@
+<h3>Temp Conversion</h3>
+<input type="text" [(ngModel)]="temp">
+<div>{{temp | temperature : 'C2F'}}</div>
+<h3 class="bg-info text-center">{{company}}</h3>
+<input type="text" [(ngModel)]='userName'>
+User Name: {{userName}}
+
+<h3 class="text-danger">Click to Choose Account Type</h3>
+
+<li *ngFor="let item of items; let i = index" (click)="onItemClicked(item)">
+    {{i + 1}} - {{item.name}} - {{item.balance}}
+</li>
+
+<div *ngIf="clicked; then show else warn;"></div>
+
+<ng-template #show>
+    You have selected: <input type="text" [(ngModel)]="clickedItem.name">
+</ng-template>
+
+<ng-template #warn>
+    <h3 class="text-danger">Please Select your Account Type</h3>
+</ng-template>
+
+<button [disabled]="buttonStatus"  class="btn btn-dark" ngClass="{'disabled': !buttonStatus}" (click)="save($event)">
+    Open your Account
+</button>

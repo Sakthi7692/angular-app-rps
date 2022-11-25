@@ -1,0 +1,91 @@
+<div class="container-fluid">
+  <header>
+  <h1 class="bg-dark text-warning text-center">
+    Angular SPA Project
+  </h1>
+  </header>
+  <section style="background-color:#adb5bd !important;">
+    <div >
+      <div class="row">
+        <div class="col-md-2 text-left"  style="width: 200px !important;">
+          <ul class="nav flex-column  nav-pills">
+            
+          <li class="nav-item">
+            <a class="nav-link " [ngClass]="selected==='spa' ? 'active' : ''"  (click)="onClick('spa')">SPA</a>
+          </li>
+            <li class="nav-item text-left">
+              <a class="nav-link" [ngClass]=" selected==='Binding' ? 'active' : ''"  (click)="onClick('Binding')" aria-current="page" href="#">Binding</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="selected==='DI' ? 'active' : ''"  (click)="onClick('DI')" href="#">DI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="selected==='Trackby' ? 'active' : ''"  (click)="onClick('Trackby')" href="#">Trackby</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="selected==='Stock' ? 'active' : ''"  (click)="onClick('Stock')">Stock</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " [ngClass]="selected==='Event' ? 'active' : ''"  (click)="onClick('Event')">Event</a>
+            </li>  <li class="nav-item">
+              <a class="nav-link " [ngClass]="selected==='LC' ? 'active' : ''"  (click)="onClick('LC')">Life Cycle</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link " [ngClass]="selected==='weather' ? 'active' : ''"  (click)="onClick('weather')">weather</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " [ngClass]="selected==='crud' ? 'active' : ''"  (click)="onClick('crud')">CRUD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " [ngClass]="selected==='messaging' ? 'active' : ''"  (click)="onClick('messaging')">Message</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " [ngClass]="selected==='cp' ? 'active' : ''"  (click)="onClick('cp')">Content Projection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " [ngClass]="selected==='rt' ? 'active' : ''"  (click)="onClick('rt')">Real Time</a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-md-10 text-center">  
+          <div class="container" style="height: 85vh; overflow-y: scroll;">  
+            <app-spa  *ngIf="selected==='spa'"></app-spa>    
+          <app-binding *ngIf="selected==='Binding'"></app-binding>
+          <app-di *ngIf="selected==='DI'"></app-di>
+          <app-trackby *ngIf="selected==='Trackby'"></app-trackby>
+          <app-stock *ngIf="selected==='Stock'"></app-stock>
+          <app-event *ngIf="selected==='Event'"></app-event>
+          <app-lifecycle *ngIf="selected==='LC'"></app-lifecycle>
+          <app-weather *ngIf="selected==='weather'"></app-weather>
+          <app-http *ngIf="selected==='crud'"></app-http>
+          <div *ngIf="selected==='messaging'">
+            <div class="row">
+              <div class="col-md-10">
+                <app-message></app-message>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <app-consumer1></app-consumer1>
+              </div>
+              <div class="col-md-5">
+                <app-consumer2></app-consumer2>
+              </div>
+            </div>
+          </div>
+          <app-ngcontent *ngIf="selected==='cp'"></app-ngcontent>
+          <message-list *ngIf="selected==='rt'"></message-list>
+          <app-inject *ngIf="selected==='Binding'"></app-inject>
+        <!--  <app-button><h3 class="bg-secondary">Add</h3></app-button>
+          <app-button> <span class="badge bg-secondary">Update</span></app-button>
+          <app-button>Delete</app-button>-->
+        </div>
+        </div>-->
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-danger text-warning text-center">
+    <h3>Copyright @Sakthi</h3>
+  </footer>
+</div>
